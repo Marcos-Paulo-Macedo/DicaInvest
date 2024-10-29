@@ -1,0 +1,106 @@
+Documentação do Aplicativo Dica Invest
+Estrutura do Projeto
+O projeto é organizado em pacotes, onde cada pacote contém uma ou mais classes que desempenham funções específicas. O pacote principal é br.unipar.dicainvest.
+Pacote: br.unipar.dicainvest
+Este pacote contém as principais classes do aplicativo, que são atividades (Activities) que gerenciam a interface do usuário e a lógica do aplicativo.
+Classes
+1. MainActivity
+•	Descrição: Esta é a atividade principal do aplicativo, que serve como a tela inicial. Ela apresenta botões para navegar para outras atividades do aplicativo.
+•	Métodos:
+•	onCreate(savedInstanceState: Bundle?): Método chamado quando a atividade é criada. Configura a interface do usuário e define os ouvintes de cliques para os botões.
+•	navigateToCulturas(): Inicia a CulturasActivity.
+•	navigateToFinancas(): Inicia a FinancasActivity.
+•	navigateToCalendario(): Inicia a CalendarioActivity.
+•	navigateToRelatorios(): Inicia a RelatoriosActivity.
+2. CalendarioActivity
+•	Descrição: Esta atividade exibe um título indicando que é o calendário de atividades.
+•	Métodos:
+•	onCreate(savedInstanceState: Bundle?): Método chamado quando a atividade é criada. Configura a interface do usuário.
+
+
+
+
+3. RelatoriosActivity
+•	Descrição: Esta atividade exibe um ranking de relatórios.
+•	Métodos:
+•	onCreate(savedInstanceState: Bundle?): Método chamado quando a atividade é criada. Configura a interface do usuário, inicializa o RecyclerView e o adaptador para exibir a lista de relatórios.
+•	Atributos:
+•	recyclerView: Referência ao RecyclerView para exibir a lista de relatórios.
+•	adapter: Adaptador para o RecyclerView.
+•	relatorioList: Lista de relatórios a serem exibidos.
+4. Relatorio
+•	Descrição: Classe de dados que representa um relatório com um título e uma descrição.
+•	Atributos:
+•	titulo: Título do relatório.
+•	descricao: Descrição do relatório.
+5. RelatorioAdapter
+•	Descrição: Adaptador para o RecyclerView que exibe a lista de relatórios.
+•	Métodos:
+•	onCreateViewHolder(parent: ViewGroup, viewType: Int): Infla o layout para cada item da lista.
+•	onBindViewHolder(holder: RelatorioViewHolder, position: Int): Vincula os dados do relatório ao ViewHolder.
+•	getItemCount(): Retorna o número total de relatórios.
+•	Classe Interna: RelatorioViewHolder
+•	Descrição: Mantém as referências para os views de cada item do relatório.
+
+
+Layouts
+1. activity_main.xml
+•	Descrição: Layout da MainActivity.
+•	Componentes:
+•	TextView: Exibe uma mensagem de boas-vindas.
+•	Quatro Button: Para navegar para diferentes atividades (Culturas, Finanças, Calendário, Relatórios).
+2. activity_calendario.xml
+•	Descrição: Layout da CalendarioActivity.
+•	Componentes:
+•	TextView: Exibe o título "Calendário de Atividades".
+3. activity_relatorios.xml
+•	Descrição: Layout da RelatoriosActivity.
+•	Componentes:
+•	TextView: Exibe o título "Ranking".
+•	RecyclerView: Para exibir a lista de relatórios.
+•	Button: Para gerar um relatório.
+4. activity_financas.xml
+•	Descrição: Layout da FinancasActivity.
+•	Componentes:
+•	TextView: Exibe o título "Gerenciar Finanças".
+5. activity_culturas.xml
+•	Descrição: Layout da CulturasActivity.
+•	Componentes:
+•	TextView: Exibe o título "Gerenciar Culturas".
+•	ListView: Para exibir a lista de culturas.
+Manifesto do Aplicativo
+AndroidManifest.xml
+•	Descrição: Arquivo de manifesto que define as atividades do aplicativo e suas configurações.
+•	Componentes:
+•	Elemento <manifest>: Define o pacote do aplicativo como br.unipar.dicainvest e contém permissões e configurações globais do aplicativo.
+•	Elemento <application>:
+•	Atributos:
+•	android:allowBackup: Permite que o sistema faça backup dos dados do aplicativo.
+•	android:icon: Define o ícone do aplicativo.
+•	android:label: Define o nome do aplicativo que será exibido ao usuário.
+•	android:roundIcon: Define o ícone redondo do aplicativo.
+•	android:supportsRtl: Indica se o aplicativo suporta layouts da direita para a esquerda.
+•	android:theme: Define o tema do aplicativo (neste caso, um tema sem ActionBar).
+•	Atividades:
+•	MainActivity: Marcada como a atividade principal que será lançada quando o aplicativo for iniciado.
+•	CulturasActivity, CalendarioActivity, FinancasActivity, RelatoriosActivity: Declaradas para que possam ser acessadas a partir da MainActivity.
+Interação do Usuário
+Navegação
+•	Navegação por Botões: Cada botão na MainActivity inicia uma nova atividade. Isso é feito através de Intents, que são mensagens que solicitam a execução de uma ação em outra atividade.
+•	Uso de OnClickListener: Permite que o aplicativo reaja ao toque do usuário, iniciando a atividade correspondente.
+RecyclerView
+•	Uso do RecyclerView: O RecyclerView é utilizado na RelatoriosActivity para exibir uma lista de relatórios. Este componente é eficiente para listas grandes, pois reutiliza as views que saem da tela.
+•	**O RelatorioAdapter é responsável por fornecer as views necessárias para cada item da lista, permitindo uma apresentação dinâmica dos dados.
+Layouts
+•	Layouts Responsivos: Todos os layouts utilizam ConstraintLayout, que permite criar interfaces de usuário responsivas e adaptáveis a diferentes tamanhos de tela.
+•	Uso de layout_constraint: Garante que os elementos da interface sejam posicionados de maneira relativa uns aos outros, melhorando a experiência do usuário em diferentes dispositivos.
+Classes e Componentes do Aplicativo
+1. Classes de Atividade
+•	Cada atividade é uma subclasse de AppCompatActivity, o que permite o uso de recursos modernos da interface do usuário e compatibilidade com versões anteriores do Android.
+•	O método onCreate é o ponto de entrada onde a interface do usuário é configurada e os componentes são inicializados.
+2. Classes de Dados
+•	A classe Relatorio é um exemplo de como as classes de dados são utilizadas para representar objetos no aplicativo. Isso melhora a legibilidade e a manutenção do código.
+3. Adaptadores
+•	O RelatorioAdapter é um exemplo de um padrão comum em Android, onde a lógica de apresentação é separada da lógica de dados. Isso facilita a manutenção e a testabilidade do código.
+
+
