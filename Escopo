@@ -1,0 +1,71 @@
+Escopo do Projeto: Aplicativo Dica Invest
+1. Escopo do Projeto
+Tema do Aplicativo
+Tema: Inovação
+
+Finalidade: O aplicativo Dica Invest tem como objetivo auxiliar pequenos e médios agricultores na gestão de suas atividades agrícolas, oferecendo ferramentas para monitorar o desempenho das culturas, gerenciar finanças, planejar atividades e analisar relatórios de desempenho. O foco é otimizar processos, aumentar a produtividade e facilitar a tomada de decisões informadas.
+
+Principais Funcionalidades
+Gerenciamento de Culturas:
+
+Cadastro e monitoramento de diferentes culturas.
+Informações sobre prazos de plantio, colheita e cuidados necessários.
+Gestão Financeira:
+
+Controle de despesas e receitas relacionadas à produção agrícola.
+Relatórios financeiros para análise de lucro e custo.
+Calendário de Atividades:
+
+Planejamento e agendamento de atividades agrícolas.
+Notificações sobre prazos e tarefas a serem realizadas.
+Relatórios de Desempenho:
+
+Geração de relatórios que resumem o desempenho das culturas e a situação financeira.
+Comparação de resultados ao longo do tempo.
+Dicas e Melhores Práticas:
+
+Sugestões de boas práticas agrícolas baseadas em dados históricos e tendências de mercado.
+Telas a Serem Desenvolvidas e Navegação
+MainActivity
+
+Tela inicial com botões para acessar as funcionalidades principais.
+Navegação para:
+CulturasActivity
+FinancasActivity
+CalendarioActivity
+RelatoriosActivity
+CulturasActivity
+
+Tela para gerenciar culturas, com opções para adicionar, editar e visualizar culturas.
+Navegação de volta para MainActivity.
+FinancasActivity
+
+Tela para gerenciar finanças, com opções para registrar receitas e despesas.
+Navegação de volta para MainActivity.
+CalendarioActivity
+
+Tela para visualizar e gerenciar o calendário de atividades agrícolas.
+Navegação de volta para MainActivity.
+RelatoriosActivity
+
+Tela para visualizar relatórios de desempenho e financeiros.
+Navegação de volta para MainActivity.
+Detalhamento da Navegação
+MainActivity → CulturasActivity
+MainActivity → FinancasActivity
+MainActivity → CalendarioActivity
+MainActivity → RelatoriosActivity
+CulturasActivity → MainActivity
+FinancasActivity → MainActivity
+CalendarioActivity → MainActivity
+RelatoriosActivity → MainActivity
+2. Público-Alvo
+Descrição do Público-Alvo
+Agricultores: Pequenos e médios agricultores que buscam melhorar a gestão de suas propriedades.
+Estudantes de Agronomia: Estudantes que desejam entender melhor a gestão agrícola e as melhores práticas.
+Consultores Agrícolas: Profissionais que trabalham com agricultores e podem usar o aplicativo como uma ferramenta de apoio.
+Como o Aplicativo Atenderá Suas Necessidades
+Facilidade de Uso: Interface intuitiva que permite aos usuários navegar facilmente entre as funcionalidades.
+Informações Relevantes: Acesso a dados e relatórios que ajudam na tomada de decisões informadas.
+Planejamento Eficiente: Ferramentas para planejamento e agendamento que ajudam a organizar as atividades agrícolas.
+Apoio Financeiro: Funcionalidades que ajudam a controlar as finanças e a entender melhor a viabilidade econômica das culturas.
