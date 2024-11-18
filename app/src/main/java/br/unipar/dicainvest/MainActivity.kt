@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             navigateToFinancas()
         }
 
+        findViewById<Button>(R.id.btnCalend).setOnClickListener {
+            navigateToCalend()
+        }
+
         findViewById<Button>(R.id.btnCalendario).setOnClickListener {
             navigateToCalendario()
         }
@@ -49,12 +53,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToCalendario() {
-        val intent = Intent(this, CalendarioActivity::class.java)
+        val intent = Intent(this, Map::class.java)
         startActivity(intent)
     }
 
     private fun navigateToRelatorios() {
         val intent = Intent(this, RelatoriosActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToCalend() {
+        val intent = Intent(this, CalendarioActivity::class.java)
         startActivity(intent)
     }
 }
